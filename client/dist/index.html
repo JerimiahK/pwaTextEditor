@@ -1,241 +1,41 @@
-Html Webpack Plugin:
-<pre>
-  Error: Child compilation failed:
-  Module build failed (from ./node_modules/babel-loader/lib/index.js):
-  SyntaxError: /Users/carlsagan/Desktop/pwaTextEditor/client/index.html: Unexpected token (1:0)
-  
-  > 1 | <!DOCTYPE html>
-      | ^
-    2 | <html lang="en"><head><script defer src="main.bundle.js"></script><script defer src="install.bundle.js"></script><meta name="theme-color" content="#225ca3" /><link rel="manifest" href="./manifest.json" /></head>
-    3 |   <head>
-    4 |     <meta charset="UTF-8" />
-      at instantiate (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:67:32)
-      at constructor (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:364:12)
-      at Parser.raise (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:3363:19)
-      at Parser.unexpected (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:3396:16)
-      at Parser.parseExprAtom (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:11543:24)
-      at Parser.parseExprSubscripts (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:11182:23)
-      at Parser.parseUpdate (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:11164:21)
-      at Parser.parseMaybeUnary (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:11138:23)
-      at Parser.parseMaybeUnaryOrPrivate (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:10967:61)
-      at Parser.parseExprOps (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:10973:23)
-      at Parser.parseMaybeConditional (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:10948:23)
-      at Parser.parseMaybeAssign (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:10906:21)
-      at Parser.parseExpressionBase (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:10856:23)
-      at /Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:10851:39
-      at Parser.allowInAnd (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:12646:16)
-      at Parser.parseExpression (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:10851:17)
-      at Parser.parseStatementContent (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:13107:23)
-      at Parser.parseStatementLike (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:12963:17)
-      at Parser.parseModuleItem (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:12944:17)
-      at Parser.parseBlockOrModuleBlockBody (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:13569:36)
-      at Parser.parseBlockBody (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:13561:10)
-      at Parser.parseProgram (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:12853:10)
-      at Parser.parseTopLevel (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:12843:25)
-      at Parser.parse (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:14751:10)
-      at parse (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:14793:38)
-      at parser (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/core/lib/parser/index.js:41:34)
-      at parser.next (<anonymous>)
-      at normalizeFile (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/core/lib/transformation/normalize-file.js:65:38)
-      at normalizeFile.next (<anonymous>)
-      at run (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/core/lib/transformation/index.js:21:50)
-      at run.next (<anonymous>)
-      at transform (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/core/lib/transform.js:22:41)
-      at transform.next (<anonymous>)
-      at step (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/gensync/index.js:261:32)
-      at /Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/gensync/index.js:273:13
-      at async.call.result.err.err (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/gensync/index.js:223:11)
-  ModuleBuildError: Module build failed (from ./node_modules/babel-loader/lib/index.js):
-  SyntaxError: /Users/carlsagan/Desktop/pwaTextEditor/client/index.html: Unexpected token (1:0)
-  
-  > 1 | <!DOCTYPE html>
-      | ^
-    2 | <html lang="en">
-    3 |   <head>
-    4 |     <meta charset="UTF-8" />
-      at instantiate (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:67:32)
-      at constructor (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:364:12)
-      at Parser.raise (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:3363:19)
-      at Parser.unexpected (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:3396:16)
-      at Parser.parseExprAtom (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:11543:24)
-      at Parser.parseExprSubscripts (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:11182:23)
-      at Parser.parseUpdate (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:11164:21)
-      at Parser.parseMaybeUnary (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:11138:23)
-      at Parser.parseMaybeUnaryOrPrivate (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:10967:61)
-      at Parser.parseExprOps (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:10973:23)
-      at Parser.parseMaybeConditional (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:10948:23)
-      at Parser.parseMaybeAssign (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:10906:21)
-      at Parser.parseExpressionBase (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:10856:23)
-      at /Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:10851:39
-      at Parser.allowInAnd (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:12646:16)
-      at Parser.parseExpression (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:10851:17)
-      at Parser.parseStatementContent (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:13107:23)
-      at Parser.parseStatementLike (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:12963:17)
-      at Parser.parseModuleItem (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:12944:17)
-      at Parser.parseBlockOrModuleBlockBody (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:13569:36)
-      at Parser.parseBlockBody (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:13561:10)
-      at Parser.parseProgram (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:12853:10)
-      at Parser.parseTopLevel (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:12843:25)
-      at Parser.parse (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:14751:10)
-      at parse (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/parser/lib/index.js:14793:38)
-      at parser (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/core/lib/parser/index.js:41:34)
-      at parser.next (<anonymous>)
-      at normalizeFile (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/core/lib/transformation/normalize-file.js:65:38)
-      at normalizeFile.next (<anonymous>)
-      at run (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/core/lib/transformation/index.js:21:50)
-      at run.next (<anonymous>)
-      at transform (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/@babel/core/lib/transform.js:22:41)
-      at transform.next (<anonymous>)
-      at step (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/gensync/index.js:261:32)
-      at /Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/gensync/index.js:273:13
-      at async.call.result.err.err (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/gensync/index.js:223:11)
-      at processResult (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/webpack/lib/NormalModule.js:758:19)
-      at /Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/webpack/lib/NormalModule.js:860:5
-      at /Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/loader-runner/lib/LoaderRunner.js:400:11
-      at /Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/loader-runner/lib/LoaderRunner.js:252:18
-      at context.callback (/Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/loader-runner/lib/LoaderRunner.js:124:13)
-      at /Users/carlsagan/Desktop/pwaTextEditor/client/node_modules/babel-loader/lib/index.js:44:103
-  
-  - index.js:67 instantiate
-    [client]/[@babel]/parser/lib/index.js:67:32
-  
-  - index.js:364 constructor
-    [client]/[@babel]/parser/lib/index.js:364:12
-  
-  - index.js:3363 Parser.raise
-    [client]/[@babel]/parser/lib/index.js:3363:19
-  
-  - index.js:3396 Parser.unexpected
-    [client]/[@babel]/parser/lib/index.js:3396:16
-  
-  - index.js:11543 Parser.parseExprAtom
-    [client]/[@babel]/parser/lib/index.js:11543:24
-  
-  - index.js:11182 Parser.parseExprSubscripts
-    [client]/[@babel]/parser/lib/index.js:11182:23
-  
-  - index.js:11164 Parser.parseUpdate
-    [client]/[@babel]/parser/lib/index.js:11164:21
-  
-  - index.js:11138 Parser.parseMaybeUnary
-    [client]/[@babel]/parser/lib/index.js:11138:23
-  
-  - index.js:10967 Parser.parseMaybeUnaryOrPrivate
-    [client]/[@babel]/parser/lib/index.js:10967:61
-  
-  - index.js:10973 Parser.parseExprOps
-    [client]/[@babel]/parser/lib/index.js:10973:23
-  
-  - index.js:10948 Parser.parseMaybeConditional
-    [client]/[@babel]/parser/lib/index.js:10948:23
-  
-  - index.js:10906 Parser.parseMaybeAssign
-    [client]/[@babel]/parser/lib/index.js:10906:21
-  
-  - index.js:10856 Parser.parseExpressionBase
-    [client]/[@babel]/parser/lib/index.js:10856:23
-  
-  - index.js:10851 
-    [client]/[@babel]/parser/lib/index.js:10851:39
-  
-  - index.js:12646 Parser.allowInAnd
-    [client]/[@babel]/parser/lib/index.js:12646:16
-  
-  - index.js:10851 Parser.parseExpression
-    [client]/[@babel]/parser/lib/index.js:10851:17
-  
-  - index.js:13107 Parser.parseStatementContent
-    [client]/[@babel]/parser/lib/index.js:13107:23
-  
-  - index.js:12963 Parser.parseStatementLike
-    [client]/[@babel]/parser/lib/index.js:12963:17
-  
-  - index.js:12944 Parser.parseModuleItem
-    [client]/[@babel]/parser/lib/index.js:12944:17
-  
-  - index.js:13569 Parser.parseBlockOrModuleBlockBody
-    [client]/[@babel]/parser/lib/index.js:13569:36
-  
-  - index.js:13561 Parser.parseBlockBody
-    [client]/[@babel]/parser/lib/index.js:13561:10
-  
-  - index.js:12853 Parser.parseProgram
-    [client]/[@babel]/parser/lib/index.js:12853:10
-  
-  - index.js:12843 Parser.parseTopLevel
-    [client]/[@babel]/parser/lib/index.js:12843:25
-  
-  - index.js:14751 Parser.parse
-    [client]/[@babel]/parser/lib/index.js:14751:10
-  
-  - index.js:14793 parse
-    [client]/[@babel]/parser/lib/index.js:14793:38
-  
-  - index.js:41 parser
-    [client]/[@babel]/core/lib/parser/index.js:41:34
-  
-  - parser.next
-  
-  - normalize-file.js:65 normalizeFile
-    [client]/[@babel]/core/lib/transformation/normalize-file.js:65:38
-  
-  - normalizeFile.next
-  
-  - index.js:21 run
-    [client]/[@babel]/core/lib/transformation/index.js:21:50
-  
-  - run.next
-  
-  - transform.js:22 transform
-    [client]/[@babel]/core/lib/transform.js:22:41
-  
-  - transform.next
-  
-  - index.js:261 step
-    [client]/[gensync]/index.js:261:32
-  
-  - index.js:273 
-    [client]/[gensync]/index.js:273:13
-  
-  - index.js:223 async.call.result.err.err
-    [client]/[gensync]/index.js:223:11
-  
-  - ModuleBuildError: Module build failed (from ./node_modules/babel-loader/lib/index.js):
-  
-  - SyntaxError: /Users/carlsagan/Desktop/pwaTextEditor/client/index.html: Unexpected token (1:0)
-  
-  - > 1 | <!DOCTYPE html>
-  
-  -     | ^
-  
-  -   2 | <html lang="en">
-  
-  -   3 |   <head>
-  
-  -   4 |     <meta charset="UTF-8" />
-  
-  - index.js:67 instantiate
-    [client]/[@babel]/parser/lib/index.js:67:32
-  
-  - index.js:364 constructor
-    [client]/[@babel]/parser/lib/index.js:364:12
-  
-  - index.js:3363 Parser.raise
-    [client]/[@babel]/parser/lib/index.js:3363:19
-  
-  - index.js:3396 Parser.unexpected
-    [client]/[@babel]/parser/lib/index.js:3396:16
-  
-  - index.js:11543 Parser.parseExprAtom
-    [client]/[@babel]/parser/lib/index.js:11543:24
-  
-  - index.js:11182 Parser.parseExprSubscripts
-    [client]/[@babel]/parser/lib/index.js:11182:23
-  
-  - index.js:11164 Parser.parseUpdate
-    [client]/[@babel]/parser/lib/index.js:11164:21
-  
-  - index.js:11138 Parser.parseMaybeUnary
-    [client]/[@babel]/parser/lib/index.js:11138:23
-  
-</pre>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Editor</title>
+    
+      <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.css">
+      </link>
+      <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.js">
+      </script>
+      <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/mode/javascript/javascript.min.js">
+      </script>
+      <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/theme/monokai.min.css">
+      </link>
+  <script defer src="main.bundle.js"></script><script defer src="install.bundle.js"></script><link href="main.css" rel="stylesheet"><meta name="theme-color" content="#225ca3" /><link rel="manifest" href="./manifest.json" /></head>
+  <body>
+    <nav id="navbar">
+      <div class="nav-btn">
+        <a class="btn btn-sm btn-dark" id="buttonInstall" role="button">Install!</a>
+      </div>
+     <h1> Just Another Text Editor</h1>
+     
+      <div class="navbar-brand" 
+            ><img src="./assets/icons/icon_96x96.png"
+          /></div>
+    </nav>
+
+    <main id="main">
+      <div class="loading-container">
+        <div class="loading-spinner"></div>
+      </div>
+    </main>
+    
+  </body>
+</html>
