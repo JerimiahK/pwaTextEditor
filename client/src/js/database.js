@@ -12,7 +12,6 @@ const initdb = async () =>
     },
   });
 
-
 export const putDb = async (content) => {
   console.log("Update the database!");
 
@@ -22,7 +21,7 @@ export const putDb = async (content) => {
 
   const store = tx.objectStore("jate");
 
-  const request = store.put(content);
+  const request = store.put({ jate: content });
 
   const result = await request;
   console.log("Data has been updated!", result);
