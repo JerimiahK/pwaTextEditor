@@ -13,7 +13,6 @@ const initdb = async () =>
   });
 
 export const putDb = async (content) => {
-  console.log("Update the database!");
 
   const jateDB = await openDB("jate", 1);
 
@@ -24,11 +23,9 @@ export const putDb = async (content) => {
   const request = store.put({ jate: content });
 
   const result = await request;
-  console.log("Data has been updated!", result);
 };
 
 export const getDb = async () => {
-  console.log("GET from the database");
 
   const jateDB = await openDB("jate", 1);
 
@@ -39,7 +36,6 @@ export const getDb = async () => {
   const request = store.getAll();
 
   const result = await request;
-  console.log(result);
 };
 
 initdb();
